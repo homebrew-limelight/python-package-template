@@ -24,7 +24,7 @@ setuptools.setup(
     long_description=long_desc,
     long_description_content_type="text/markdown",
     url="https://github.com/homebrew-limelight/repo-url",
-    packages=setuptools.find_packages(), # or list like in discord.py
+    packages=setuptools.find_packages(),  # or list like in discord.py
     classifiers=[
         "License :: OSI Approved :: MIT License",
         "Intended Audience :: Developers",
