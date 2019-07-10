@@ -1,0 +1,19 @@
+language: python
+python:
+- '3.6'
+install:
+- pip install -r requirements.txt
+- pip install black
+jobs:
+  include:
+  - script: black --check .
+  - script: your_test_here # remove if you have none
+  - stage: deploy
+    script: skip
+    deploy:
+      provider: pypi
+      on:
+        tags: true
+      user: your_pypi_username
+      password:
+        secure: password # generate with "travis encrypt pypi_password --com" in project dir
